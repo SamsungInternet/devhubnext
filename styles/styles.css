@@ -2,7 +2,7 @@
   --color-purple: #0595cd;
 
   --size-spacer: 30px;
-  --size-margin-head: 10px;
+  --size-margin-title: 0.2em 1em 0.2em 1em;
   --size-icon: 50px;
   --size-author: 60px;
   --size-author-small: 40px;
@@ -11,7 +11,7 @@
   --font-subtitle: 1.4em;
   --font-lh: 1.4em;
 
-  --main-menu-bg: rgba(0,0,0,0.75);
+  --main-menu-bg: rgba(0,0,0,0.8);
 }
 
 html {
@@ -23,7 +23,7 @@ header {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: var(--size-margin-head) 0;
+  padding: var(--size-margin-title);
   color: white;
   background-color: var(--main-menu-bg);
   position: fixed;
@@ -152,7 +152,7 @@ nav {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: var(--size-spacer);
+  padding: var(--size-margin-title);
   color: white;
   background-color: rgba(0,0,0,0.9);
 }
