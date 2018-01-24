@@ -2,7 +2,8 @@
   --color-purple: #0595cd;
 
   --size-spacer: 30px;
-  --size-margin-title: 0.2em 1em 0.2em 1em;
+  --size-spacer-margin: 0.2em 1em 0.2em 1em;
+  --size-spacer-article: 30px 15px;
   --size-icon: 50px;
   --size-author: 60px;
   --size-author-small: 40px;
@@ -23,7 +24,7 @@ header {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: var(--size-margin-title);
+  padding: var(--size-spacer-margin);
   color: white;
   background-color: var(--main-menu-bg);
   position: fixed;
@@ -88,7 +89,9 @@ nav {
 
 .feature-img {
   display: block;
-  width: 100%;
+  width: 130%;
+  margin-left:-15%;
+  object-fit:contain;
 }
 
 .feature-info {
@@ -127,7 +130,7 @@ nav {
   width: var(--size-author);
   height: var(--size-author);
   overflow: hidden;
-  margin: var(--size-spacer);  
+  margin: var(--size-spacer-margin);  
 }
 
 .author-img {
@@ -138,8 +141,7 @@ nav {
 
 .article {
   position: relative;
-  margin: var(--size-spacer);
-  margin-bottom: 0;
+  margin: var(--size-spacer-article);
 }
 
 .article-img {
@@ -152,7 +154,6 @@ nav {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: var(--size-margin-title);
   color: white;
   background-color: rgba(0,0,0,0.9);
 }
@@ -160,6 +161,10 @@ nav {
 .article-author {
   width: var(--size-author-small);
   height: var(--size-author-small);
-  margin-right: var(--size-spacer);
+  margin: var(--size-spacer-margin);
   overflow: hidden;
 }
+
+/* .article-title {
+  padding-top: 2px;
+} */
