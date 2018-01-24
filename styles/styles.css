@@ -103,7 +103,7 @@ nav {
   display: flex;
   align-items: center;
   max-height: var(--size-icon);
-  margin-bottom: var(--size-spacer);
+  margin-bottom: 5px;
   color: white;
   background-color: black;
 }
