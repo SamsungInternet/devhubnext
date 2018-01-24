@@ -174,7 +174,7 @@ nav {
   position: fixed;
   bottom: 0px;
   width: 100%;
-  height: 3em;
+  height: 4em;
   background-color: rgba(250,250,250,.9);
   display: flex;
   flex-flow: row;
