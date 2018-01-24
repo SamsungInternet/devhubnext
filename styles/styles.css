@@ -87,11 +87,15 @@ nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.feature{
+  width: 100%;
+  overflow: hidden;
+}
+
 .feature-img {
   display: block;
-  width: 130%;
+  width:130%; 
   margin-left:-15%;
-  object-fit:contain;
 }
 
 .feature-info {
