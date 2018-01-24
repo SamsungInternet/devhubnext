@@ -3,7 +3,7 @@
 
   --size-spacer: 30px;
   --size-spacer-margin: 0.2em 1em 0.2em 1em;
-  --size-spacer-article: 30px 15px;
+  --size-spacer-article: 20px 15px 30px 15px;
   --size-icon: 50px;
   --size-author: 60px;
   --size-author-small: 40px;
@@ -147,6 +147,7 @@ nav {
   position: relative;
   margin: var(--size-spacer-article);
 }
+
 
 .article-img {
   width: 100%;
