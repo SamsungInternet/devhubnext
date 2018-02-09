@@ -1,0 +1,12 @@
+contentDir = "content"
+layoutDir = "layouts"
+publishDir = "public"
+buildDrafts = false
+baseURL = "/"
+canonifyURLs = true
+title = "Samsung Internet Dev Hub"
+watch = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"

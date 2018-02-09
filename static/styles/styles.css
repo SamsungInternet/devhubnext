@@ -1,0 +1,195 @@
+:root {
+  --color-purple: #0595cd;
+
+  --size-spacer: 30px;
+  --size-spacer-margin: 0.2em 1em 0.2em 1em;
+  --size-spacer-article: 25px 15px 30px 15px;
+  --size-icon: 50px;
+  --size-author: 60px;
+  --size-author-small: 40px;
+
+  --font-title: 1.6em;
+  --font-subtitle: 1.4em;
+  --font-lh: 1.4em;
+
+  --main-menu-bg: rgba(0,0,0,0.8);
+}
+
+html {
+  font-family: 'Samsung One';
+}
+
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--size-spacer-margin);
+  color: white;
+  background-color: var(--main-menu-bg);
+  position: fixed;
+  width: 100%;
+  z-index:100;
+}
+
+.header-title {
+  font-size: var(--font-title);
+  text-align: right;
+}
+
+.logo-top{
+  height:1em;
+}
+
+nav {
+  position: relative;
+  width: var(--size-icon);
+  height: var(--size-icon);
+  padding-top: var(--size-icon);
+}
+
+.menu-control {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: var(--size-icon);
+  height: var(--size-icon);
+  background: url('../images/menuIcon.svg') no-repeat left center;
+  background-size: .3em
+}
+
+.menu-checkbox {
+  display: none;
+}
+
+.nav-links {
+  position: absolute;
+  top: var(--size-icon);
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--main-menu-bg);
+}
+
+.menu-checkbox:checked + .nav-links {
+  max-height: 500px;
+  transition: max-height 1s;
+}
+
+.nav-link {
+  display: block;
+  width: calc(100vw - 20px);
+  margin: 0 var(--size-spacer);
+  padding: var(--size-spacer);
+  line-height: var(--font-lh);
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature{
+  width: 100%;
+  overflow: hidden;
+}
+
+.feature-img {
+  display: block;
+  width:130%; 
+  margin-left:-15%;
+}
+
+.feature-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-height: var(--size-icon);
+  margin-bottom: 5px;
+  color: white;
+  background-color: black;
+}
+
+.feature-info::after {
+  content:"";
+  display: block;
+  width: var(--size-icon);
+  height: calc(var(--size-icon) - var(--size-spacer));
+}
+
+.bluetooth::after {
+  background: url(https://cdn.glitch.com/afe39c82-11b3-4eb3-bfea-8f1765823dc0%2Fbluetooth.svg?1516799782922) no-repeat center;
+  background-size: contain;
+}
+
+.feature-title {
+  width: calc(100% - 100px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--font-subtitle);
+  line-height: var(--font-lh);
+}
+
+.feature-author {
+  flex-shrink: 0;
+  width: var(--size-author);
+  height: var(--size-author);
+  overflow: hidden;
+  margin: var(--size-spacer-margin);  
+}
+
+.author-img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.article {
+  position: relative;
+  margin: var(--size-spacer-article);
+}
+
+
+.article-img {
+  width: 100%;
+}
+
+.article-info {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: white;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.article-author {
+  width: var(--size-author-small);
+  height: var(--size-author-small);
+  margin: var(--size-spacer-margin);
+  overflow: hidden;
+}
+
+#btm-bar{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 4em;
+  background-color: rgba(250,250,250,.95);
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  align-items: center;
+  align-content: center;
+
+}
+
+.si-icon{
+  height: 75%;
+  align-content: center;
+}
+
+.btm-link{
+  font-size: 1.3em;
+}
