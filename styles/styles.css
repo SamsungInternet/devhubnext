@@ -5,9 +5,8 @@
   --color-dark-grey:#3D3D3D;
 
   --size-spacer-sm: 10px;
-  --size-spacer: 30px;
+  --size-spacer: 15px;
   --size-spacer-margin: 0.2em 1em 0.2em 1em;
-  --size-spacer-article: 25px 15px 30px 15px;
   --size-icon: 50px;
   --size-author: 60px;
   --size-author-small: 40px;
@@ -21,8 +20,14 @@
 }
 
 body {
-  padding-bottom: var(--size-icon);
   font-family: 'Samsung One';
+  padding-bottom: var(--size-icon);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--size-spacer);
 }
 
 header {
@@ -53,15 +58,9 @@ header {
   color: white;
 }
 
-.feature{
-  width: 100%;
-  overflow: hidden;
-}
-
 .feature-img {
   display: block;
-  width: calc(100% + var(--size-spacer) + var(--size-spacer)); 
-  margin-left: calc(var(--size-spacer) * -1);
+  width: 100%;
 }
 
 .feature-info {
@@ -69,7 +68,6 @@ header {
   display: flex;
   align-items: center;
   max-height: var(--size-icon);
-  margin-bottom: 5px;
   color: white;
   background-color: var(--color-purple);
 }
@@ -79,6 +77,7 @@ header {
   display: block;
   width: var(--size-icon);
   height: calc(var(--size-icon) - var(--size-spacer));
+  flex-shrink: 0;
 }
 
 .bluetooth::after {
@@ -87,7 +86,7 @@ header {
 }
 
 .feature-title {
-  width: calc(100% - 100px);
+  width: calc(100vw - 120px - 40px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -100,7 +99,7 @@ header {
   width: var(--size-author);
   height: var(--size-author);
   overflow: hidden;
-  margin: var(--size-spacer-margin);  
+  margin: var(--size-spacer);  
 }
 
 .author-feature-img {
@@ -116,7 +115,6 @@ header {
 
 .article {
   position: relative;
-  margin: var(--size-spacer-article);
   display:grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -172,6 +170,20 @@ header {
   color: var(--color-text);
 }
 
+.social {
+  background-color: var(--color-purple);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--size-spacer);
+}
+
+.social-link {
+  width: var(--size-author-small);
+  height: var(--size-author-small);
+  overflow: hidden;
+  background-color: white;
+}
+
 @media (max-width: 949px) {
   nav {
     position: absolute;
@@ -222,18 +234,34 @@ header {
 }
 
 @media (min-width: 650px) {
-  body {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: var(--grid-gap);
+  main {
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-rows: 50px;
+    padding: calc(var(--size-icon) +  var(--size-spacer)) var(--size-spacer) var(--size-spacer);
   }
 
   .feature {
     grid-column: span 2;
+    grid-row: span 5;
+  }
+  
+  .article {
+    grid-row: span 2;
+  }
+  
+  .social {
+    grid-column: -2;
+    max-height: 70px;
+    margin-top: calc(var(--size-spacer) * -1);
   }
 }
 
 @media (min-width: 950px) {
+  header {
+    background-color: var(--color-purple);
+  }
+  
   .nav {
     position: relative;
   }
